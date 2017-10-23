@@ -1,1 +1,1 @@
-# Classifying Traffic Sign with Convolutional Neural Networks
+# Classifying Traffic Signs with a Convolutional Neural Network
