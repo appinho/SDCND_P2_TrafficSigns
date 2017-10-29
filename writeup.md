@@ -4,7 +4,7 @@
 
 [image1]: ./report_images/traffic_sign_examples.png "3 examples of the data set"
 [image2]: ./report_images/histogram_trainingdata.png "Histogram of training data"
-[image3]: ./report_images/histogram_validationdata.jpg "Histogram of validation data"
+[image3]: ./report_images/histogram_validationdata.png "Histogram of validation data"
 [image4]: ./report_images/histogram_testdata.png "Histogram of test data"
 [image5]: ./test_images/bumpy_road.jpg "Bumpy Road Traffic Sign"
 [image6]: ./test_images/limit60.jpg "Speed limit 60 Traffic Sign"
@@ -20,16 +20,14 @@ The German Traffic Sign Dataset can be found with the following link: http://ben
 
 First, the pickle files of the training, validation and test data set are loaded. Next, the images and labels of the 3 data partitions are stored separately. All the images possess the format of 32x32 pixels and with the numpy library command "unique" all occuring label identifier for all images can be found. Alltogether, there are 43 different traffic signs within the complete data set. The whole data set is splitted up so that the training data possess 34799, the validation set 4410 and the test set 12630 examples. It is usual to use the majorities of examples to train comprehensively. The classification accuracy of the trained neural net is evaluated by the validation set later.
 
-3 examples with their assigned label id as caption can be seen here:
+3 examples with their assigned label id as caption can be seen here:  
 
 ![alt text][image1]
 
 The axis also show that the resolution of the images is indeed 32x32 pixels.  
-Moreover, it is useful to plot the histogram of all occuring traffic sign per data set. They can be seen here:
+Moreover, it is useful to plot the histogram of all occuring traffic sign per data set. They can be seen here:  
 
-![alt text][image2]
-![alt text][image3]
-![alt text][image4]
+![alt text][image2] ![alt text][image3] ![alt text][image4]
 
 All 3 histograms show that the number of examples per labels varies a lot. Usually, a uniformly distributed trainind data set leads to better classification results later. Therefore, a data augmentation step can be performed to find more examples of rare labels. Common methods for this data augmetation step are to rotate, translate, flip or add noise to the already existing examples. However, the invariance of each label class must be considered by performing one of the following transformations because a mirrored "30km/h speed limit" sign would lead to confusions within the dataset.
 
@@ -61,7 +59,7 @@ This set up ended up in an accuracy of 94,6% for the validation set.
 
 ### 3 Test a Model on New Images
 
-Here are 7 German traffic signs that can be found on the web:
+Here are 7 German traffic signs that can be found on the web:  
 ![alt text][image5] ![alt text][image6] ![alt text][image7] 
 ![alt text][image8] ![alt text][image9] ![alt text][image10] ![alt text][image11]
 
